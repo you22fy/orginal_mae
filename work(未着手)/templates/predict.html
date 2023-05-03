@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<main>
+    <div class="box">
+        {% if label and score %}
+            <h2 class="result">セリフ{{quote}}は</h2>
+            <h2 class="result"> {{label}}なセリフです。 </h2>
+            <h3 class="result">{{label}}度合いは{{score}}です</h3>
+        {% else %}
+            <h2 class="result">数字を入力してください</h2>
+        {% endif %}
+    </div>
+
+    <div class="box">
+        <h2 class="result">似ているセリフは{{sim}}</h2>
+    </div>
+
+</main>
+{% endblock %}
