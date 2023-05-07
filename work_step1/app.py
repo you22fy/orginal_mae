@@ -1,12 +1,14 @@
 from flask import Flask,render_template, request
-from model import predict_sentiment, find_closest_value
-app = Flask(__name__)
+from model import <ここに回答を記入>
+
+
+app = <ここに回答を記入>
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    return <ここに回答を記入>
 
-@app.route("/predict", methods = ['GET', 'POST'])
+@app.route("/predict", methods = <ここに回答を記入>)
 def predict():
     if request.method == 'GET':
         return render_template('predict.html')
@@ -15,10 +17,9 @@ def predict():
         result = predict_sentiment(quote)
         label = result[0]['label']
         score = result[0]['score']
-        sim = find_closest_value(result[0]['label'], result[0]['score'])
-        return render_template('predict.html',quote=quote, label=label, score=score, sim = sim)
+        return render_template('predict.html',quote=<ここに回答を記入>, label=<ここに回答を記入>, score=<ここに回答を記入>)
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=3000)
+    app.run(debug=True)
 

@@ -10,10 +10,11 @@
             <h2 class="result">数字を入力してください</h2>
         {% endif %}
     </div>
-
-    <div class="box">
-        <h2 class="result">似ているセリフは{{closestValue}}</h2>
-    </div>
+    {% if closestValue %}
+        <div class="box">
+            <h2 class="result">似ているセリフは{{closestValue}}</h2>
+        </div>
+    {% endif %}
 
 </main>
 {% endblock %}
